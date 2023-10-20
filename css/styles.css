@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wave {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.title{
+    color: #124636;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 7rem;
+}
+
+section {
+    width: 360px;
+    height: 600px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.repo {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-uno {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-dos {
+    display: none;
+}
+
+.img-uno img {
+    width: 100%;
+    height: 300px;
+}
+
+
+.img-dos img{
+    width: 100%;
+    height: 200px;
+}
+
+.login-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-container{
+    display: none;
+}
+
+.portrait-menu {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+
+.log-out-1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.welcome {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#imagen::placeholder {
+    color: transparent; /* Oculta el color original del placeholder */
+    text-shadow: 0 0 0 #13d695; /* Aplica una sombra de texto con el color deseado */
+}
+
+.screen {
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    border-radius: 5%;
+    background-image: url("/JavaScript/ATM/img/check.svg"), url("/JavaScript/ATM/img/desposit.svg"), url("/JavaScript/ATM/img/withdraw.svg"), url("/JavaScript/ATM/img/R.svg");
+    background-position-x: left;
+    background-position-y: center;
+    background-size: 0%, 0%, 0%, 0%;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    text-align: right;
+    font-family:'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+#dinero {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    border-radius: 5%;
+    background-image: url("/JavaScript/ATM/img/coin_peso.svg");
+    background-position-x: left;
+    background-position-y: center;
+    background-size: 12%;
+    background-repeat: no-repeat;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+ 
+.radio-container {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.radio-container input {
+    display: none;
+}
+
+/* Cambiar el color de los radio buttons */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #13d695; /* Borde del círculo */
+    border-radius: 50%; /* Hacer el círculo */
+    outline: none;
+    cursor: pointer;
+}
+
+/* Estilo cuando el radio button está marcado */
+input[type="radio"]:checked {
+    background-color: #13d695; /* Cambiar el fondo cuando está marcado */
+    border-color: #13d695; /* Cambiar el borde cuando está marcado */
+}
+
+.boton:hover{
+    background-color: #124636;
+}
+
+label {
+    font-size: 12px;
+}
+
+.avatar {
+    width: 100px;
+}
+
+.tablero {
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 288px;
+    justify-content: center;
+}
+
+.keyboard {
+    display: grid;
+    width: 80%;
+    height: 100%;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: repeat(4, 24%);
+    justify-content: center;
+    align-content: center; 
+    gap: 3px;
+}
+
+.right {
+    display: block;
+    width: 10%;
+    height: auto;
+}
+
+#space{
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.left {
+    display: block;
+    width: 10%;
+    height: auto;
+}
+
+button {
+    font-size: 1rem;
+    width: auto;
+    border-radius: 25%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    background-color:#13d695;
+}
+
+#cancel {
+    color: white;
+    font-size: 80%;
+    background-color: red;
+}
+
+#clear {
+    color: white;
+    font-size: 80%;
+    background-color: rgb(236, 198, 25);
+}
+
+#ok {
+    color: white;
+    font-size: 80%;
+    background-color: green;
+}
+
+#punto{
+    color: white;
+    font-size: 80%;
+    background-color: #ff8000;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    margin: 18px 0;
+    color: #124636;;
+}
+
+.input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div:after, .input-div:before { /* Barrita de animacion cierra y abre*/
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #38d39f;
+    transition: .3s;
+}
+
+.input-div:after { /*Animacion empieza en medio*/
+    right: 50%;
+}
+
+.input-div:before {
+    left: 50%;
+}
+
+.input-div.focus .i i {
+    color: #38d39f;
+}
+
+.input-div.focus div h5 {
+    top: -5px;
+    font-size: 15px;
+}
+
+.input-div.focus:after, .input-div.focus:before {
+    width: 50%;
+}
+
+.input-div.one {
+    margin-top: 0;
+}
+
+.input-div.two {
+    margin-bottom: 4px;
+}
+
+.res {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17px;
+}
+
+.i i{
+    color: #d9d9d9;
+    transition: .3s;
+}
+
+.input-div > div {
+    position: relative;
+    height: 45px;
+}
+
+.input-div > div h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.input-user, .input-password {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+}
+
+p {
+    font-size: .9rem;
+}
+
+.text-p-m {
+    font-size: 1.5rem;
+}
+
+a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: .3s;
+} 
+
+a:hover{
+    color: #38d393;
+}
+
+.btn {
+    display: block;
+    width: 50%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    border: none;
+    background-image: linear-gradient(to right, #65c965, #38d39f, #32be8f);
+    cursor: pointer;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    background-size: 200%;
+    transition: .5s;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.log-out {
+    display: block;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 2rem 1rem;
+    font-size: .9rem;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #65c965, #38d39f, #32be8f);
+    cursor: pointer;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover, .log-out:hover {
+    background-position: right;
+}

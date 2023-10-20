@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="author" content="Shirley Juliet Gil Sánchez">
+    <title>Cajero Automático</title>
+    <link rel='stylesheet' href='./css/styles.css'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap' rel='stylesheet'>
+    <script src='https://kit.fontawesome.com/5fe059947a.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <img class='wave' src='img/wave.png' alt=''>
+    <section class='container'>
+        <section class='img-uno' id='uno'>
+                <h2 class='title'>Green Bank</h2>
+                <img src='img/bg.svg' alt=''>
+        </section>
+
+        <section class='img-dos' id='dos'>
+            <h2 class='title'>Green Bank</h2>
+            <p class='text-p-m'>Bienvenido</p>
+            <div class='portrait-menu'>
+                <img src='img/Credit_Card.svg' alt=''>
+            </div>
+            <div class='log-out-1'>
+                <button class="log-out" onclick="logout()">Cerrar sección</button>
+            </div>
+        </section>
+
+        <section class='login-container' id='login'>
+                <div class="repo">
+                    <img class='avatar' src='img/avatar.svg' alt=''>
+                    <h2 class="h2">Iniciar sesión</h2>
+                        <div class='input-div one'>
+                            <div class='i'>
+                                <i class='fa-solid fa-user'></i>
+                            </div>
+                            <div class='user-box'>
+                                <h5>Usuario</h5>
+                                <input class='input-user' type='text' id='user' minlength="1" maxlength="8">
+                            </div>
+                        </div>
+                        <div class='input-div two'>
+                            <div class='i'>
+                                <i class='fa-solid fa-lock'></i>
+                            </div>
+                            <div class='password-box'>
+                                <h5>Contraseña</h5>
+                                <input class='input-password' type='password' id='password' onkeydown='checkEnter(event)' minlength="1" maxlength="8">
+                            </div>
+                        </div>
+                    <a href='#'>¿No puede acceder a su cuenta?</a>
+                    <div class="res">
+                        <button class="btn" onclick="login()">Acceder</button>
+                    </div>
+                </div>
+        </section>
+
+        <section class='menu-container' id='menu'>
+            <div class="repo">
+                <h2 class='welcome'>Menú</h2>
+                <div class='options'>
+                    <label><input id="r1" type="radio" name="opciones" value="r1" onclick="updateMenu()"> Consultar saldo</label>
+                    <label><input id="r2" type="radio" name="opciones" value="r2" onclick="updateMenu()"> Ingresar monto</label>
+                    <label><input id="r3" type="radio" name="opciones" value="r3" onclick="updateMenu()"> Retirar monto</label>
+                </div>
+                <input id='imagen' class='screen' type='text' disabled>
+                <input id='dinero' class='cash' type='text' onchange="updateMenu()" disabled>               
+                <div class='tablero'>
+                    <div class='right'></div>
+                    <div class='keyboard'>
+                        <button class='boton' id='zero' onclick='clickBoton(this)'>0</button>
+                        <button class='boton' id='one' onclick='clickBoton(this)'>1</button>
+                        <button class='boton' id='two' onclick='clickBoton(this)'>2</button>
+                        <button class='boton' id='three' onclick='clickBoton(this)'>3</button>
+                        <button class='boton' id='four' onclick='clickBoton(this)'>4</button>
+                        <button class='boton' id='five'onclick='clickBoton(this)'>5</button>
+                        <button class='boton' id='six' onclick='clickBoton(this)'>6</button>
+                        <button class='boton' id='seven' onclick='clickBoton(this)'>7</button>
+                        <button id='space'></button>
+                        <button class='boton' id='eight'onclick='clickBoton(this)'>8</button>
+                        <button class='boton' id='nine' onclick='clickBoton(this)'>9</button>
+                        <button id='space'></button>
+                        <button class='boton' id='cancel' onclick='cancel()'>Cancelar</button>
+                        <button class='boton' id='clear' onclick='clearOne()'>Corregir</button>
+                        <button class='boton' id='ok' onclick='ok()'>Enviar</button>
+                        <button class='boton' id='punto' onclick='clickBoton(this)'>.</button>
+                        <button id='space'></button>
+                    </div>
+                    <div class='left'></div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src='js/main.js'></script>
+</body>
+</html>
